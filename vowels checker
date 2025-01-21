@@ -1,0 +1,24 @@
+package coding_problems;
+
+import java.util.Scanner;
+
+public class vowel_or_not {    public static void vowel_checker(String Char) {
+        int len1 = Char.length();
+        for (int i = 0; i < len1; i++) { // Loop through each character in the string
+            String vowels = "aeiouAEIOU"; // Define all vowels (both uppercase and lowercase)
+            int len2 = vowels.length(); // Get the length of the vowels string
+            for (int j = 0; j < len2; j++) { // Check the current character against each vowel
+                if (Char.charAt(i) == vowels.charAt(j)) { // If a match is found
+                    System.out.println("Vowel found: " + Char.charAt(i)); 
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the string");
+        String Char = scan.nextLine();
+        vowel_checker(Char); 
+    }
+}
